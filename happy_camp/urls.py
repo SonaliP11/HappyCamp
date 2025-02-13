@@ -16,11 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from camp import views as index_views
-from about import views as about_views
+# from camp import views as club_views
+# from about import views as about_views
+# from children import views as children_views
 
 urlpatterns = [
-    path('', index_views.index, name='index'),
-     path('about/', about_views.about_me, name='about'),
+    path("", include("camp.urls"), name="camp-urls"),
+    # path('about/', about_views.about_me, name='about'),
     path('admin/', admin.site.urls),
-]
+    # path('children/', children_views.ChildList.as_view(), name='child-list'),
+   
+    ]

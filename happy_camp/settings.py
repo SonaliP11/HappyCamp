@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'camp',
     'about',
+    'children',
 ]
 
 MIDDLEWARE = [

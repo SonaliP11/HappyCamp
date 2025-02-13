@@ -1,12 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Club
 
 # Create your views here.
-def index(request):
 
-    return HttpResponse("Welcome to happy camp!")
-
-    if request.method == "POST":
-        return HttpResponse("You must have POSTed something")
-    else:
-        return HttpResponse(request.method)
+class ClubList(generic.ListView):
+    model = Club
+    queryset = Club.objects.all()
+    template_name = "club_list.html"
