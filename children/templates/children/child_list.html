@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>My Children</h2>
+<a href="{% url 'child-create' %}">Add Child</a>
+
+<ul>
+    {% for child in children %}
+        <li>
+            <a href="{% url 'child-detail' child.id %}">{{ child.first_name }} {{ child.last_name }}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
