@@ -4,7 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 def index(request):
 
-    return HttpResponse("Welcome to happy camp2!")
+    return HttpResponse("Welcome to happy camp - group!")
 
     if request.method == "POST":
         return HttpResponse("You must have POSTed something")
