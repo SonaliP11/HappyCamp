@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ child.first_name }} {{ child.last_name }}</h2>
+<p>Date of Birth: {{ child.date_of_birth }}</p>
+<p>Allergies: {{ child.allergies }}</p>
+<p>Emergency Contact: {{ child.emergency_contact }}</p>
+
+<a href="{% url 'child-update' child.id %}">Edit</a> |
+<a href="{% url 'child-delete' child.id %}">Delete</a> |
+<a href="{% url 'child-list' %}">Back</a>
+{% endblock %}
