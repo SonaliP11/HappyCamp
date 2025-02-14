@@ -25,6 +25,6 @@ urlpatterns = [
     # path('about/', about_views.about_me, name='about'),
     path('admin/', admin.site.urls),
     path('children/', include('children.urls')),
-    # path('children/', children_views.ChildList.as_view(), name='child-list'),
+    
    
     ]
