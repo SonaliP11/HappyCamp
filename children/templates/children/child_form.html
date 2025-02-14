@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>{% if form.instance.id %}Edit{% else %}Add{% endif %} Child</h2>
-<form method="POST">
+<h2>Add Child</h2>
+<form method="POST" action="{% url 'child-create' %}">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Save</button>
