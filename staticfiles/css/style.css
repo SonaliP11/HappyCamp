@@ -1,0 +1,108 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F4F9F9;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #FF6F61 !important; /* Bright Coral */
+    padding: 12px 20px;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FFFFFF !important;
+}
+
+.navbar .nav-link {
+    color: #FFFFFF !important;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover, 
+.navbar .nav-link.active {
+    color: #FFD166 !important; /* Warm Yellow */
+}
+
+/* Join Button */
+.navbar .join-btn {
+    background-color: #06D6A0; /* Teal Green */
+    color: #FFFFFF !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar .join-btn:hover {
+    background-color: #FFD166; /* Warm Yellow */
+    color: #333 !important;
+}
+
+/* Navbar Toggle (Mobile) */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    filter: invert(100%);
+}
+
+/* Messages */
+.alert {
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    background-color :#FF6F61; /* Bright Coral */
+    text-align: center;
+    padding: 15px 0;
+    color: #FFFFFF;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.footer a {
+    color: #FFD166;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: #06D6A0; /* Teal Green */
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .navbar .nav-links {
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    .navbar .nav-item {
+        padding: 5px 0;
+    }
+
+    .navbar .join-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
