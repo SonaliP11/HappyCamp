@@ -3,6 +3,7 @@ from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Club(models.Model):
     name = models.CharField(max_length=255)  # Club name
     slug = models.SlugField(max_length=255)  # Club slug
