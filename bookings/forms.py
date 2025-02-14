@@ -9,8 +9,9 @@ class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = ['club', 'child']
-    def __init__(self, *args, **kwargs):
+        
+    def __init__(self, *args, **kwargs):        
         user = kwargs.pop('user')  # Get the logged-in user
         super().__init__(*args, **kwargs)
         # Filter child options to only show the parent's children
-        self.fields['child'].queryset = Child.objects.filter(parent=user)
+        self.fields['child'].queryset = Child.objects.all().filter(parent=user)

@@ -3,12 +3,15 @@ from django.contrib.auth.decorators import login_required
 from .models import Booking
 from .forms import BookingForm
 from camp.models import Club
+from children.models import Child
+
 
 # List all bookings for the logged-in parent
 @login_required
 def booking_list(request):
     bookings = Booking.objects.filter(parent=request.user)
     return render(request, 'bookings/booking_list.html', {'bookings': bookings})
+
 # Create a new booking
 @login_required
 def booking_create(request):
@@ -31,3 +34,5 @@ def booking_cancel(request, booking_id):
         booking.save()
         return redirect('booking-list')
     return render(request, 'bookings/booking_confirm_cancel.html', {'booking': booking})
+
+
