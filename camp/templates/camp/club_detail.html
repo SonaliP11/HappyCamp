@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center">{{ club.name }}</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{ club.featured_image.url }}" class="img-fluid" alt="Club Image">
+        </div>
+        <div class="col-md-6">
+            <h4>Details</h4>
+            <p><strong>Location:</strong> {{ club.location }}</p>
+            <p><strong>Age Group:</strong> {{ club.age_group_min }} - {{ club.age_group_max }}</p>
+            <p><strong>Start Date:</strong> {{ club.start_date }}</p>
+            <p><strong>End Date:</strong> {{ club.end_date }}</p>
+            <p><strong>Capacity:</strong> {{ club.capacity }} kids</p>
+            <p><strong>Price:</strong> ${{ club.price }}</p>
+            <p><strong>Contact Email:</strong> {{ club.contact_email }}</p>
+            <p><strong>Contact Phone:</strong> {{ club.contact_phone }}</p>
+            <p><strong>Website:</strong> <a href="{{ club.website }}" target="_blank">{{ club.website }}</a></p>
+            <hr>
+            <p>{{ club.description }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
