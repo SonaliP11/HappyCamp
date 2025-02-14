@@ -20,11 +20,15 @@ from django.urls import path, include
 # from about import views as about_views
 # from children import views as children_views
 
+
 urlpatterns = [
     path("", include("camp.urls"), name="camp-urls"),
     # path('about/', about_views.about_me, name='about'),
     path('admin/', admin.site.urls),
+    path('bookings/', include('bookings.urls')),
     path('children/', include('children.urls')),
-    
    
-    ]
+    
+    
+]
+
