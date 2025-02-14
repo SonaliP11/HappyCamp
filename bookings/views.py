@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Booking
 from .forms import BookingForm
-
+from camp.models import Club
 
 # List all bookings for the logged-in parent
 @login_required
