@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Child
 from .forms import ChildForm
 
+
 # List all children for the logged-in parent
 @login_required
 def child_list(request):
@@ -24,6 +25,7 @@ def child_create(request):
             child = form.save(commit=False)
             child.parent = request.user  # Set parent automatically
             child.save()
+            print(child)
             return redirect('child-list')  # Redirect to the child list
     else:
         form = ChildForm()

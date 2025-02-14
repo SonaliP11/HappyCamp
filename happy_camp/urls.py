@@ -24,7 +24,6 @@ urlpatterns = [
     path("", include("camp.urls"), name="camp-urls"),
     # path('about/', about_views.about_me, name='about'),
     path('admin/', admin.site.urls),
+    path("accounts/", include("allauth.urls")),
     path('children/', include('children.urls')),
-    
-   
-    ]
+ ]
