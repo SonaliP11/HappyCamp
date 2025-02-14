@@ -7,4 +7,4 @@ from .models import Club
 class ClubList(generic.ListView):
     model = Club
     queryset = Club.objects.all()
-    template_name = "club_list.html"
+    template_name = "camp/index.html"
