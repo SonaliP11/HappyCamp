@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'camp',
     'about',
+    'bookings',
     'children',
 ]
 
