@@ -9,7 +9,7 @@
             <strong>Child:</strong> {{ booking.child.first_name }} {{ booking.child.last_name }}<br>
             <strong>Club:</strong> {{ booking.club.name }}<br>
             <strong>Status:</strong> {{ booking.status }}<br>
-            <strong>Date:</strong> {{ booking.date }}<br>
+            <strong>Date:</strong> {{ booking.booking_date }}<br>
             <strong>Time:</strong> {{ booking.time }}<br>
             {% if booking.status == 'pending' %}
                 <a href="{% url 'booking-cancel' booking.id %}">Cancel</a>
@@ -40,7 +40,7 @@
                     </div>
                     {% endwith %}
                 </div>
-                <a href="{% url 'booking-create' %}">Book now</a>
+                <a href="{% url 'booking-create' %}" class="btn btn-primary btn-sm mt-2">Book now</a>
             </div>
         </div>
     </div>
