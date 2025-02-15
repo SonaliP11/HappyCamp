@@ -27,6 +27,7 @@
         </div>
     </div>
     <div class="row mt-4">
+
         <div class="col-md-6">
             <p><strong><i class="fas fa-envelope"></i> Contact Email:</strong> {{ club.contact_email }}</p>
             <p><strong><i class="fas fa-phone"></i> Contact Phone:</strong> {{ club.contact_phone }}</p>
@@ -40,7 +41,7 @@
             <a href="{% url 'home' %}" class="btn btn-primary btn-lg me-2 mb-3 shadow-sm">
                 <i class="fas fa-arrow-left"></i> Back to Clubs
             </a>
-            <a href="#" class="btn btn-success btn-lg mb-3 shadow-lg px-4 py-2">
+            <a href="{% url 'booking-list' %}" class="btn btn-success btn-lg mb-3 shadow-lg px-4 py-2">
                 <i class="fas fa-user-plus"></i> Enroll Now
             </a>
         </div>
