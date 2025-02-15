@@ -1,34 +1,51 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container mt-4">
-    <h1 class="text-center">{{ club.name }}</h1>
+<div class="container mt-4 club-container">
+    <h1 class="text-center text-primary">{{ club.name }}</h1>
     <div class="row mt-4">
-        <div class="col-md-6">
-            <img src="{{ club.featured_image.url }}" class="img-fluid" alt="Club Image">
+        <div class="col-md-6 text-center">
+            <div class="image-card">
+                <img src="{{ club.featured_image.url }}" class="img-fluid rounded shadow-lg" alt="Club Image">
+            </div>
         </div>
         <div class="col-md-6">
-            <p>{{ club.description | safe}}</p>
+            <p class="lead">{{ club.description | safe }}</p>
         </div>
     </div>
     <div class="row mt-4">
+        <div class="col-md-6">
+            <p><strong><i class="fas fa-calendar"></i> Daily Schedule:</strong> {{ club.daily_schedule | safe }}</p>
+            <p><strong><i class="fas fa-map-marker-alt"></i> Location:</strong> {{ club.location }}</p>
+            <p><strong><i class="fas fa-child"></i> Age Group:</strong> {{ club.age_group_min }} - {{ club.age_group_max }}</p>
+        </div>
+        <div class="col-md-6">
+            <p><strong><i class="fas fa-calendar-alt"></i> Start Date:</strong> {{ club.start_date }}</p>
+            <p><strong><i class="fas fa-calendar-alt"></i> End Date:</strong> {{ club.end_date }}</p>
+            <p><strong><i class="fas fa-users"></i> Capacity:</strong> {{ club.capacity }} kids</p>
+            <p><strong><i class="fas fa-pound-sign"></i> Price:</strong> £{{ club.price }}</p>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <p><strong><i class="fas fa-envelope"></i> Contact Email:</strong> {{ club.contact_email }}</p>
+            <p><strong><i class="fas fa-phone"></i> Contact Phone:</strong> {{ club.contact_phone }}</p>
+        </div>
+        <div class="col-md-6">
+            <p><strong><i class="fas fa-globe"></i> Website:</strong> <a href="{{ club.website }}" target="_blank">{{ club.website }}</a></p>
+        </div>
+    </div>
+    <div class="row mt-4 text-center">
         <div class="col-md-12">
-            <p><strong>Location:</strong> {{ club.location }}</p>
-            <p><strong>Age Group:</strong> {{ club.age_group_min }} - {{ club.age_group_max }}</p>
-            <p><strong>Start Date:</strong> {{ club.start_date }}</p>
-            <p><strong>End Date:</strong> {{ club.end_date }}</p>
-            <p><strong>Capacity:</strong> {{ club.capacity }} kids</p>
-            <p><strong>Price:</strong> £{{ club.price }}</p>
-            <p><strong>Contact Email:</strong> {{ club.contact_email }}</p>
-            <p><strong>Contact Phone:</strong> {{ club.contact_phone }}</p>
-            <p><strong>Website:</strong> <a href="{{ club.website }}" target="_blank">{{ club.website }}</a></p>
-        </div>
-    </div>
-    <div class="row mt-4">
-        <div class="col-md-12 text-center">
-            <a href="{% url 'home' %}" class="btn btn-primary btn-lg me-2 mb-3">Back to Clubs</a>
-            <a href="#" class="btn btn-success btn-lg mb-3">Enroll Now</a>
+            <a href="{% url 'home' %}" class="btn btn-primary btn-lg me-2 mb-3 shadow-sm">
+                <i class="fas fa-arrow-left"></i> Back to Clubs
+            </a>
+            <a href="#" class="btn btn-success btn-lg mb-3 shadow-lg px-4 py-2">
+                <i class="fas fa-user-plus"></i> Enroll Now
+            </a>
         </div>
     </div>
 </div>
+
+
 {% endblock %}
