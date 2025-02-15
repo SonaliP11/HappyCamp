@@ -9,22 +9,22 @@ body {
 }
 
 /* Navbar Styling */
-.navbar {
-    background-color: #FF6F61 !important; /* Bright Coral */
+.navbar-background {
+    background-color: #ffdf2f;
+    border-bottom: 5px solid #FF6F61; /* Bright Coral */
+    color: black;
     padding: 12px 20px;
     transition: all 0.3s ease-in-out;
     
 }
 
 .navbar-brand {
-    font-size: 1.8rem;
+    font-size: 1rem;
     font-weight: bold;
-    color: #FFFFFF !important;
 }
 
 .navbar .nav-link {
-    color: #FFFFFF !important;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: 500;
     padding: 10px 15px;
     transition: color 0.3s ease-in-out;
@@ -32,7 +32,7 @@ body {
 
 .navbar .nav-link:hover, 
 .navbar .nav-link.active {
-    color: #FFD166 !important; /* Warm Yellow */
+    color: black; /* Black */
 }
 
 
@@ -55,17 +55,32 @@ body {
 
 /* Footer */
 .footer {
-    background-color :#FF6F61; /* Bright Coral */
+    background-color :#ffdf2f; /* Yellow */
     text-align: center;
     padding: 15px 0;
-    color: #FFFFFF;
-    border-top: 5px solid #FFD166; 
+    color: black;
+    border-top: 5px solid #FF6F61; /* Bright Coral */
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#footer-text {
+    color: #0d6efd; /* Blue */
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-style: italic;
 }
 
 .footer p {
+    color: #0d6efd; /* Blue */
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-style: italic;
 }
+
+
 
 .footer a {
     color: #FFD166;
@@ -145,10 +160,10 @@ body {
     margin-right: 5px;
 }
 .club-container {
-    background: #FF6F61;
+    /* background: #FF6F61; */
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px #FF6F61;
     transition: transform 0.3s ease-in-out;
     margin-bottom: 50px; 
 
