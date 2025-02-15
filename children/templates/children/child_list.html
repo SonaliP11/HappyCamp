@@ -1,14 +1,61 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>My Children</h2>
-<a href="{% url 'child-create' %}">Add Child</a>
+<h2>Children List</h2>
 
-<ul>
-    {% for child in children %}
-        <li>
-            <a href="{% url 'child-detail' child.id %}">{{ child.first_name }} {{ child.last_name }}</a>
-        </li>
-    {% endfor %}
-</ul>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Parent</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for child in children %}
+        <tr>
+            <td>{{ child.first_name }}</td>
+            <td>{{ child.last_name }}</td>
+            <td>{{ child.parent.username }}</td>
+            <td><button onclick="toggleDetails({{ child.id }})">View Details</button></td>
+        </tr>
+        <tr id="details-{{ child.id }}" style="display: none;">
+            <td colspan="5">
+                <strong>Date of Birth:</strong> {{ child.date_of_birth }}<br>
+                <strong>Allergies:</strong> {{ child.allergies }}<br>
+                <strong>Emergency Contact:</strong> {{ child.emergency_contact }}<br>
+                <strong>Bookings:</strong>
+                <ul>
+                    {% for booking in child.bookings.all %}
+                    <li>{{ booking.club.name }} on {{ booking.booking_date }} ({{ booking.status }})</li>
+                    {% empty %}
+                    <li>No bookings found.</li>
+                    {% endfor %}
+                </ul>
+                <a href="{% url 'child-update' child.id %}">Edit</a> |
+                <a href="{% url 'child-delete' child.id %}">Delete</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5">No children found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{% url 'child-create' %}" class="btn btn-primary">Add New Child</a>
+
+<script>
+function toggleDetails(childId) {
+    var detailsRow = document.getElementById('details-' + childId);
+    if (detailsRow.style.display === 'none') {
+        detailsRow.style.display = 'table-row';
+    } else {
+        detailsRow.style.display = 'none';
+    }
+}
+</script>
+
 {% endblock %}

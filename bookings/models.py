@@ -7,8 +7,8 @@ from django.contrib.auth.models import User
 
 
 class Booking(models.Model):
-    club = models.ForeignKey(Club, on_delete=models.CASCADE)  # Club being booked
-    child = models.ForeignKey(Child, on_delete=models.CASCADE)  # Child attending
+    club = models.ForeignKey(Club, on_delete=models.CASCADE, related_name='bookings')  # Club being booked
+    child = models.ForeignKey(Child, on_delete=models.CASCADE,related_name='bookings')  # Child attending
     parent = models.ForeignKey('auth.User', on_delete=models.CASCADE)  # Parent making booking
     booking_date = models.DateTimeField(auto_now_add=True)
     STATUS_CHOICES = [
