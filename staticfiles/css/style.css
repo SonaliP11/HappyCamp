@@ -35,21 +35,7 @@ body {
     color: #FFD166 !important; /* Warm Yellow */
 }
 
-/* Join Button */
-.navbar .join-btn {
-    background-color: #06D6A0; /* Teal Green */
-    color: #FFFFFF !important;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background 0.3s ease-in-out;
-}
 
-.navbar .join-btn:hover {
-    background-color: #FFD166; /* Warm Yellow */
-    color: #333 !important;
-}
 
 /* Navbar Toggle (Mobile) */
 .navbar-toggler {
@@ -105,4 +91,101 @@ body {
         width: 100%;
         text-align: center;
     }
+}
+
+/* Title Styling */
+.title-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FF6F61;
+}
+
+/* Club Cards */
+.club-card {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.club-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Club Images */
+.club-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Club Content */
+/* Club Details in One Line */
+.club-details {
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Club Icons */
+.club-details i {
+    color: #FF6F61;
+    margin-right: 5px;
+}
+
+
+
+/* Styled Table */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #009879;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #007f63;
 }
