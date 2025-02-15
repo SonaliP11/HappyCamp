@@ -7,9 +7,9 @@
     <h1 class="text-center title-text">Explore Our After-School Clubs</h1>
     <p class="text-center text-muted">Find fun and exciting activities for your children!</p>
     
-    <div class="row">
+    <div class="row justify-content-center">
         {% for club in club_list %}
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
             <div class="card club-card shadow-sm">
                 <a href="{% url 'club_detail' club.slug %}" class="stretched-link"></a>
                 <!-- Club Image -->
@@ -33,10 +33,6 @@
                 </div>
             </div>
         </div>
-      
-    </div>
-    <div class="row">
-      
         {% endfor %}
     </div>
 

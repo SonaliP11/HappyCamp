@@ -9,22 +9,22 @@ body {
 }
 
 /* Navbar Styling */
-.navbar {
-    background-color: #FF6F61 !important; /* Bright Coral */
+.navbar-background {
+    background-color: #ffdf2f;
+    border-bottom: 5px solid #FF6F61; /* Bright Coral */
+    color: black;
     padding: 12px 20px;
     transition: all 0.3s ease-in-out;
     
 }
 
 .navbar-brand {
-    font-size: 1.8rem;
+    font-size: 1rem;
     font-weight: bold;
-    color: #FFFFFF !important;
 }
 
 .navbar .nav-link {
-    color: #FFFFFF !important;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: 500;
     padding: 10px 15px;
     transition: color 0.3s ease-in-out;
@@ -32,7 +32,7 @@ body {
 
 .navbar .nav-link:hover, 
 .navbar .nav-link.active {
-    color: #FFD166 !important; /* Warm Yellow */
+    color: black; /* Black */
 }
 
 
@@ -55,16 +55,32 @@ body {
 
 /* Footer */
 .footer {
-    background-color :#FF6F61; /* Bright Coral */
+    background-color :#ffdf2f; /* Yellow */
     text-align: center;
     padding: 15px 0;
-    color: #FFFFFF;
+    color: black;
+    border-top: 5px solid #FF6F61; /* Bright Coral */
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#footer-text {
+    color: #0d6efd; /* Blue */
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-style: italic;
 }
 
 .footer p {
+    color: #0d6efd; /* Blue */
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-style: italic;
 }
+
+
 
 .footer a {
     color: #FFD166;
@@ -93,6 +109,7 @@ body {
     }
 }
 
+
 /* Title Styling */
 .title-text {
     font-size: 2rem;
@@ -100,6 +117,21 @@ body {
     color: #FF6F61;
 }
 
+/* index page card */
+
+.card.club-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card.club-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top.club-image {
+    height: 200px;
+    object-fit: cover;
+}
 /* Club Cards */
 .club-card {
     border-radius: 10px;
@@ -123,15 +155,35 @@ body {
 /* Club Details in One Line */
 .club-details {
     font-size: 14px;
-    color: #555;
     font-weight: 500;
-}
-
-/* Club Icons */
-.club-details i {
     color: #FF6F61;
     margin-right: 5px;
 }
+.club-container {
+    /* background: #FF6F61; */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px #FF6F61;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 50px; 
+
+}
+
+.image-card {
+    height: 800px; /* Adjust the height as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-card img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+   
 
 
 
