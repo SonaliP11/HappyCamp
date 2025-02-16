@@ -2,57 +2,52 @@
 {% load static %}
 
 {% block content %}
-<h2>Children List</h2>
-
-<table class="styled-table">
-    <thead>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Parent</th>
-            <th>Details</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for child in children %}
-        <tr>
-            <td>{{ child.first_name }}</td>
-            <td>{{ child.last_name }}</td>
-            <td>{{ child.parent.username }}</td>
-            <td><button onclick="toggleDetails('{{ child.id }}')">View Details</button></td>
-        </tr>
-        <tr id="details-{{ child.id }}" style="display: none;">
-            <td colspan="5">
-                <strong>Date of Birth:</strong> {{ child.date_of_birth }}<br>
-                <strong>Allergies:</strong> {{ child.allergies }}<br>
-                <strong>Emergency Contact:</strong> {{ child.emergency_contact }}<br>
-                <strong>Bookings:</strong>
-                <ul>
-                    {% for booking in child.bookings.all %}
-                    <li>{{ booking.club.name }} on {{ booking.booking_date }} ({{ booking.status }})</li>
-                    {% empty %}
-                    <li>No bookings found.</li>
-                    {% endfor %}
-                </ul>
-                <a href="{% url 'child-update' child.id %}">Edit</a> |
-                <a href="{% url 'child-delete' child.id %}">Delete</a>
-            </td>
-        </tr>
-        {% empty %}
-        <tr>
-            <td colspan="5">No children found.</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
-
-<a href="{% url 'child-create' %}" class="btn btn-primary">Add New Child</a>
+<h2 class="text-center">Children List</h2>
+<div class="row justify-content-center">
+    {% for child in children %}
+    <div class="col-12 col-md-10 col-lg-8 mb-4">
+        <div class="card custom-shadow px-3">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h4 class="card-title mb-0"><strong>{{ child.first_name }} {{ child.last_name }}</strong></h4>
+                        <small class="text-muted">Parent: {{ child.parent.username }}</small>
+                    </div>
+                    <button class="btn btn-secondary" onclick="toggleDetails('{{ child.id }}')">View Details</button>
+                </div>
+                <div id="details-{{ child.id }}" style="display: none;" class="mt-3">
+                    <p><strong>Date of Birth:</strong> {{ child.date_of_birth }}</p>
+                    <p><strong>Allergies:</strong> {{ child.allergies }}</p>
+                    <p><strong>Emergency Contact:</strong> {{ child.emergency_contact }}</p>
+                    <p><strong>Bookings:</strong></p>
+                    <ul>
+                        {% for booking in child.bookings.all %}
+                        <li>{{ booking.club.name }} on {{ booking.booking_date }} ({{ booking.status }})</li>
+                        {% empty %}
+                        <li>No bookings found.</li>
+                        {% endfor %}
+                    </ul>
+                    <a href="{% url 'child-update' child.id %}" class="btn btn-primary btn-sm">Edit</a>
+                    <a href="{% url 'child-delete' child.id %}" class="btn btn-danger btn-sm">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p class="text-center">No children found.</p>
+    {% endfor %}
+</div>
+<div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8 mb-4">
+        <a href="{% url 'child-create' %}" class="btn btn-primary mt-4">Add New Child</a>
+    </div>
+</div>
 
 <script>
 function toggleDetails(childId) {
     var detailsRow = document.getElementById('details-' + childId);
     if (detailsRow.style.display === 'none') {
-        detailsRow.style.display = 'table-row';
+        detailsRow.style.display = 'block';
     } else {
         detailsRow.style.display = 'none';
     }
