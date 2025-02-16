@@ -279,6 +279,7 @@ body {
     height: auto;
     object-fit: cover;
     object-position: center;
+    max-height: 300px;
 
 }
 
@@ -304,3 +305,6 @@ p.lead {
 .border-custom {
     border: 2px solid #FF6F61;
 }
+
+
+

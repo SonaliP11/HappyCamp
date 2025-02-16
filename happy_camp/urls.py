@@ -19,6 +19,8 @@ from django.urls import path, include
 # from camp import views as club_views
 # from about import views as about_views
 # from children import views as children_views
+from django.contrib.auth import views as auth_views
+
 
 
 urlpatterns = [
@@ -29,6 +31,8 @@ urlpatterns = [
     path('bookings/', include('bookings.urls')),
     path('children/', include('children.urls')),
     path('summernote/', include('django_summernote.urls')),
- ]
+    path('login/', auth_views.LoginView.as_view(template_name='account/login.html'), name='account_login'),
+]
+ 
 
 
