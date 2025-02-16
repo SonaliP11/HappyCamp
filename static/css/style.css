@@ -307,4 +307,74 @@ p.lead {
 }
 
 
+/* Testimonial Section */
+.testimonial-card {
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Adjust the width to make it smaller */
+    margin: 0 auto; /* Center the card */
+    border: 4px solid #FF6F61; /* Primary color border */
+    max-height: min-content;
+}
 
+.testimonial-text {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.testimonial-author {
+    font-size: 0.9rem;
+    color: #777;
+    text-align: right;
+}
+
+.testimonial-rating {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.testimonial-rating .fa-star {
+    color: #FF6F61 !important; /* Primary color for the stars */
+    font-size: 1.2rem;
+}
+
+/* Responsive Styles for Testimonial Carousel */
+@media (max-width: 768px) {
+    .testimonial-card {
+        max-width: 100%; /* Full width on mobile */
+        margin: 0 15px; /* Add some margin on mobile */
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem; /* Slightly smaller text on mobile */
+    }
+
+    .testimonial-author {
+        font-size: 0.8rem; /* Slightly smaller author text on mobile */
+    }
+
+    .testimonial-rating .fa-star {
+        font-size: 1rem; /* Slightly smaller stars on mobile */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .testimonial-card {
+        max-width: 80%; /* Adjust width on tablet */
+        margin: 0 auto; /* Center the card */
+    }
+
+    .testimonial-text {
+        font-size: 1rem; /* Normal text size on tablet */
+    }
+
+    .testimonial-author {
+        font-size: 0.9rem; /* Normal author text size on tablet */
+    }
+
+    .testimonial-rating .fa-star {
+        font-size: 1.2rem; /* Normal star size on tablet */
+    }
+}
