@@ -15,25 +15,22 @@
         <div class="col-md-4 mb-4">
             <div class="card club-card shadow-sm">
                 <a href="{% url 'club_detail' club.slug %}" class="stretched-link"></a>
-                <!-- Club Image -->
                 <div class="image-container">
-                    <img src="{{ club.featured_image.url }}" 
-                         class="card-img-top club-image" alt="Club Image">
+                    <img src="{{ club.featured_image.url }}" class="card-img-top club-image" alt="Club Image">
                 </div>
                 <div class="card-body">
                     <h4 class="card-title club-name">{{ club.name }}</h4>
-
-                     <!-- Club Details in One Line -->
-                     <p class="club-details">
+                    <p class="club-details">
                         <i class="fas fa-map-marker-alt"></i> {{ club.location }} |
                         <i class="fas fa-users"></i> {{ club.capacity }} kids |
                         <i class="fas fa-calendar-alt"></i> {{ club.start_date }} - {{ club.end_date }}
                         <i class="fas fa-clock"></i> {{ club.start_time }} - {{ club.end_time }}
                         <i class="fas fa-phone"></i> {{ club.contact }}
                     </p>
-                
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: {{ club.available_percentage }}%;" aria-valuenow="{{ club.available_spots }}" aria-valuemin="0" aria-valuemax="{{ club.capacity }}">
+                        <div class="progress-bar" role="progressbar" style="width: {{ club.available_percentage }}%;" 
+                             aria-valuenow="{{ club.available_spots }}" 
+                             aria-valuemin="0" aria-valuemax="{{ club.capacity }}">
                             {{ club.available_spots }} places left
                         </div>
                     </div>
@@ -47,29 +44,26 @@
     <!-- Next Week's Events Section -->
     <h2 class="text-center mt-5">Upcoming Events of Next Week</h2>
     <div class="row justify-content-center">
-        {% for club in next_week_clubs %}
+        {% for club in page_obj %}
         <div class="col-md-4 mb-4">
             <div class="card club-card shadow-sm">
                 <a href="{% url 'club_detail' club.slug %}" class="stretched-link"></a>
-                <!-- Club Image -->
                 <div class="image-container">
-                    <img src="{{ club.featured_image.url }}" 
-                         class="card-img-top club-image" alt="Club Image">
+                    <img src="{{ club.featured_image.url }}" class="card-img-top club-image" alt="Club Image">
                 </div>
                 <div class="card-body">
                     <h4 class="card-title club-name">{{ club.name }}</h4>
-
-                     <!-- Club Details in One Line -->
-                     <p class="club-details">
+                    <p class="club-details">
                         <i class="fas fa-map-marker-alt"></i> {{ club.location }} |
                         <i class="fas fa-users"></i> {{ club.capacity }} kids |
                         <i class="fas fa-calendar-alt"></i> {{ club.start_date }} - {{ club.end_date }}
                         <i class="fas fa-clock"></i> {{ club.start_time }} - {{ club.end_time }}
                         <i class="fas fa-phone"></i> {{ club.contact }}
                     </p>
-                
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: {{ club.available_percentage }}%;" aria-valuenow="{{ club.available_spots }}" aria-valuemin="0" aria-valuemax="{{ club.capacity }}">
+                        <div class="progress-bar" role="progressbar" style="width: {{ club.available_percentage }}%;" 
+                             aria-valuenow="{{ club.available_spots }}" 
+                             aria-valuemin="0" aria-valuemax="{{ club.capacity }}">
                             {{ club.available_spots }} places left
                         </div>
                     </div>
@@ -77,8 +71,22 @@
                 </div>
             </div>
         </div>
+        {% empty %}
+        <p class="text-center">No upcoming events for next week.</p>
         {% endfor %}
     </div>
+
+    <!-- Pagination Controls -->
+    <div class="d-flex justify-content-center mt-3">
+        {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-outline-primary me-2">❮ Previous</a>
+        {% endif %}
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}" class="btn btn-outline-primary">Next ❯</a>
+        {% endif %}
+    </div>
+
 </div>
 
 {% endblock %}
