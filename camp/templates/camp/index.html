@@ -8,6 +8,60 @@
     <h1 class="text-center title-text">Explore Our After-School Clubs</h1>
     <p class="text-center text-muted">Find fun and exciting activities for your children!</p>
     
+    <!-- This Week's Events Section -->
+    <h2 class="text-center mt-5">This Week's Events</h2>
+    <div class="row justify-content-center">
+        {% for club in this_week_clubs %}
+        <div class="col-md-4 mb-4">
+            <div class="card club-card shadow-sm">
+                <a href="{% url 'club_detail' club.slug %}" class="stretched-link"></a>
+                <!-- Club Image -->
+                <div class="image-container">
+                    <img src="{{ club.featured_image.url }}" 
+                         class="card-img-top club-image" alt="Club Image">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title club-name">{{ club.name }}</h4>
+
+                    <!-- Club Details in One Line -->
+                    <p class="club-details">
+                        <i class="fas fa-map-marker-alt"></i> {{ club.location }} |
+                        <i class="fas fa-users"></i> {{ club.capacity }} kids |
+                        <i class="fas fa-calendar-alt"></i> {{ club.start_date }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Upcoming Events of Next Week Section -->
+    <h2 class="text-center mt-5">Upcoming Events of Next Week</h2>
+    <div class="row justify-content-center">
+        {% for club in next_week_clubs %}
+        <div class="col-md-4 mb-4">
+            <div class="card club-card shadow-sm">
+                <a href="{% url 'club_detail' club.slug %}" class="stretched-link"></a>
+                <!-- Club Image -->
+                <div class="image-container">
+                    <img src="{{ club.featured_image.url }}" 
+                         class="card-img-top club-image" alt="Club Image">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title club-name">{{ club.name }}</h4>
+
+                    <!-- Club Details in One Line -->
+                    <p class="club-details">
+                        <i class="fas fa-map-marker-alt"></i> {{ club.location }} |
+                        <i class="fas fa-users"></i> {{ club.capacity }} kids |
+                        <i class="fas fa-calendar-alt"></i> {{ club.start_date }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
     <div class="row justify-content-center">
         {% for club in club_list %}
         <div class="col-md-4 mb-4">
