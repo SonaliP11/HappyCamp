@@ -14,6 +14,10 @@ body {
     background-color: #ffdf2f;
     border-bottom: 5px solid #FF6F61; /* Bright Coral */
     color: black;
+.navbar-background {
+    background-color: #ffdf2f;
+    border-bottom: 5px solid #FF6F61; /* Bright Coral */
+    color: black;
     padding: 12px 20px;
     transition: all 0.3s ease-in-out;
     
@@ -21,10 +25,12 @@ body {
 
 .navbar-brand {
     font-size: 1rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
 .navbar .nav-link {
+    font-size: 1.8rem;
     font-size: 1.8rem;
     font-weight: 500;
     padding: 10px 15px;
@@ -33,6 +39,7 @@ body {
 
 .navbar .nav-link:hover, 
 .navbar .nav-link.active {
+    color: black; /* Black */
     color: black; /* Black */
 }
 
@@ -57,8 +64,21 @@ body {
 /* Footer */
 .footer {
     background-color :#ffdf2f; /* Yellow */
+    background-color :#ffdf2f; /* Yellow */
     text-align: center;
     padding: 15px 0;
+    color: black;
+    border-top: 5px solid #FF6F61; /* Bright Coral */
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#footer-text {
+    color: #0d6efd; /* Blue */
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-style: italic;
     color: black;
     border-top: 5px solid #FF6F61; /* Bright Coral */
     font-size: 1.2rem;
@@ -75,11 +95,17 @@ body {
 
 .footer p {
     color: #0d6efd; /* Blue */
+    color: #0d6efd; /* Blue */
     margin: 0;
     font-size: 1.2rem;
     font-weight: 800;
     font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-style: italic;
 }
+
+
 
 
 
@@ -111,6 +137,7 @@ body {
 }
 
 
+
 /* Title Styling */
 .title-text {
     font-size: 2rem;
@@ -118,6 +145,21 @@ body {
     color: #FF6F61;
 }
 
+/* index page card */
+
+.card.club-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card.club-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top.club-image {
+    height: 200px;
+    object-fit: cover;
+}
 /* index page card */
 
 .card.club-card {
@@ -160,6 +202,31 @@ body {
     color: #FF6F61;
     margin-right: 5px;
 }
+.club-container {
+    /* background: #FF6F61; */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px #FF6F61;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 50px; 
+
+}
+
+.image-card {
+    height: 800px; /* Adjust the height as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-card img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+   
 .club-container {
     /* background: #FF6F61; */
     padding: 30px;
@@ -243,51 +310,7 @@ body {
     background-color: #007f63;
 }
 
-/* About Page */
-
-.hero-image {
-    background-size: cover;
-    background-image: url('/static/images/hero.jpeg');
-    background-position: center;
-    position: relative;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.translucent-container {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-}
-
-.card {
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.team-card-img {
-    border-top-left-radius: 80px;
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 80px;
-    border-bottom-left-radius: 80px;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-
-}
-
-h1, h2 {
-    color: #FF6F61;
-    font-weight: bold;
-}
-
-p.lead {
-    font-size: 1.25rem;
-    color: white;
+.custom-shadow {
+    box-shadow: 0 4px 8px #FF6F61;
 }
 
