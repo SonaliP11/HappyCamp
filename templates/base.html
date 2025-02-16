@@ -1,6 +1,9 @@
 {% load static %}
 
 {% url 'home' as home_url %}
+{% url 'about' as about_url %}
+{% url 'child-list' as child_list_url %}
+{% url 'booking-list' as booking_list_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -36,11 +39,11 @@
 
     <div class="alert alert-info text-center mb-0 fs-5" role="alert">
         {% if user.is_authenticated %}
-        Welcome, <strong class="text-warning">{{ user.username }}</strong>!
-        <a href="{% url 'account_logout' %}" class="alert-link fs-5">Sign Out</a>
+        Welcome, <strong>{{ user.username }}</strong> !
+        <a href="{% url 'account_logout' %}" class="alert-link fs-5" style="color: #FF6F61">Sign Out</a>
         {% else %}
         Explore Activities for kids!
-        <a href="{% url 'account_login' %}" class="alert-link fs-5 text-warning">Sign In</a> to book fun activities.
+        <a href="{% url 'account_login' %}" class="alert-link fs-5" style="color: #FF6F61">Sign In</a> to book fun activities.
         {% endif %}
     </div>
 
@@ -51,13 +54,13 @@
                     <a class="nav-item nav-link fs-4 px-5"
                         href="{% url 'home' %}"><strong>Home</strong></a>
                     <a class="nav-item nav-link fs-4 px-5" href="{% url 'booking-list' %}"><strong>Book sessions</strong></a>
-                    <a class="nav-item nav-link fs-4 px-5" href="#"><strong>About</strong></a>
+                    <a class="nav-item nav-link fs-4 px-5" href="{% url 'about' %}"><strong>About</strong></a>
                 </div>
                 <a class="navbar-brand mx-auto logo-container" href="{% url 'home' %}">
                     <img src="{% static 'images/logo1.png' %}" alt="Logo" class="logo" width="100">
                 </a>
                 <div class="navbar-nav ml-auto nav-right">
-                    <a class="nav-item nav-link fs-4 px-5" href="{% url 'account_login' %}"><strong>Log-in</strong></a>
+                    <a class="nav-item nav-link fs-4 px-5" href="{% url 'account_login' %}"><strong>Sign-in</strong></a>
                     <a class="nav-item nav-link fs-4 px-5" href="{% url 'child-list' %}"><strong>My Dashboard</strong></a>
                     <a class="nav-item nav-link fs-4 px-5" href="{% url 'account_signup' %}"><strong>Sign-up</strong></a>
                 </div>
@@ -154,12 +157,6 @@
                 </ul>
             </div>
             {% endblock %}
-        </p>
-        <p class="m-0 text-left">Follow us: 
-            <a href="https://facebook.com" class="text-white ms-3"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://twitter.com" class="text-white ms-3"><i class="fab fa-twitter-square"></i></a>
-            <a href="https://instagram.com" class="text-white ms-3"><i class="fab fa-instagram-square"></i></a>
-            <a href="https://youtube.com" class="text-white ms-3"><i class="fab fa-youtube-square"></i></a>
         </p>
     </footer>
 
