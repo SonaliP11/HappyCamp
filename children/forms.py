@@ -6,4 +6,4 @@ class ChildForm(forms.ModelForm):
     
     class Meta:
         model = Child
-        fields = ['first_name', 'last_name', 'date_of_birth', 'allergies', 'emergency_contact']
+        fields = ['first_name', 'last_name', 'date_of_birth', 'emergency_contact']
