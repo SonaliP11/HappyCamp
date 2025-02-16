@@ -23,7 +23,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path("", include("camp.urls"), name="club_list"),
-    # path('about/', about_views.about_me, name='about'),
+    path('about/', include('about.urls')),
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path('bookings/', include('bookings.urls')),

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Image Section -->
+<div class="hero-image">
+    <div class="container text-center text-white py-5">
+        <div class="translucent-container p-4 mb-4">
+            <h1 class="mb-4">About Us</h1>
+            <p class="lead">Welcome to Happy Camp! We are dedicated to providing fun and educational activities for children. Our mission is to create a safe and engaging environment where kids can learn, play, and grow.</p>
+        </div>
+        <div class="translucent-container p-4">
+            <h2 class="mt-5">Our Mission</h2>
+            <p class="lead">Our mission is to provide a variety of after-school programs that cater to the interests and needs of children. We believe in fostering creativity, teamwork, and personal growth through our activities.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4 mb-4 text-center">
+    <h2 class="mt-5">Our Team</h2>
+    <h4 class="mb-4">Meet the amazing team <strong style="color:blue">BOB THE BUILDERS:</strong></h4>
+    
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="#" class="team-card-img" alt="Zalak">
+                <div class="card-body">
+                    <h5 class="card-title"><strong>Prapti</strong></h5>
+                    <p class="card-text">Full Stack Developer</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="#" class="team-card-img" alt="Prapti">
+                <div class="card-body">
+                    <h5 class="card-title"><strong>Zalak</strong></h5>
+                    <p class="card-text">Full Stack Developer</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="{% static 'images/sonali.JPG' %}" class="team-card-img" alt="Sonali">
+                <div class="card-body">
+                    <h5 class="card-title"><strong>Sonali</strong></h5>
+                    <p class="card-text">Full Stack Developer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4 mb-4 text-left">
+    <h2 class="mt-5">Contact Us</h2>
+    <p>If you have any questions or would like to learn more about our programs, please feel free to contact us:</p>
+    <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@happycamp.com">info@happycamp.com</a></p>
+        <p><i class="fas fa-phone"></i> Phone: <a href="tel:+1234567890">(123) 456-7890</a></p>
+    </div>
+</div>
+    
+{% endblock %}
