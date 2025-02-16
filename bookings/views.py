@@ -7,18 +7,22 @@ from children.models import Child
 
 
 # List all bookings for the logged-in parent
-@login_required
 def booking_list(request):
-    children = Child.objects.filter(parent=request.user)
-    bookings = Booking.objects.filter(child__in=children)
+    children = Child.objects.filter(parent=request.user) if request.user.is_authenticated else []
+    bookings = Booking.objects.filter(child__in=children) if request.user.is_authenticated else []
     clubs = Club.objects.all()
     for club in clubs:
-        club.available_spots = club.capacity - club.bookings.count()
+        club.available_seats = club.capacity - club.bookings.count()
     return render(request, 'bookings/booking_list.html', {'bookings': bookings, 'clubs': clubs})
-
+    
 # Create a new booking
 @login_required
 def booking_create(request):
+    club_id = request.GET.get('club_id')
+    initial_data = {}
+    if club_id:
+        initial_data['club'] = get_object_or_404(Club, id=club_id)
+    
     if request.method == 'POST':
         form = BookingForm(request.POST, user=request.user)
         if form.is_valid():
@@ -27,7 +31,8 @@ def booking_create(request):
             booking.save()
             return redirect('booking-list')
     else:
-        form = BookingForm(user=request.user)
+        form = BookingForm(user=request.user, initial=initial_data)
+    
     return render(request, 'bookings/booking_form.html', {'form': form})
 
 # Cancel a booking
