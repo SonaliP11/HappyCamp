@@ -242,3 +242,7 @@ body {
     background-color: #007f63;
 }
 
+.custom-shadow {
+    box-shadow: 0 4px 8px #FF6F61;
+}
+

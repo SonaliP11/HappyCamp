@@ -1,12 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow-sm" style="width: 100%; max-width: 600px;">
+        <div class="card-header text-center">
+            <h2 class="mb-0">Book a Club</h2>
+        </div>
+        <div class="card-body">
+            <form method="POST" class="needs-validation" novalidate>
+                {% csrf_token %}
+                <div class="mb-3">
+                    {{ form.as_p }}
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary me-2">Submit Booking</button>
+                    <a href="{% url 'booking-list' %}" class="btn btn-secondary">Back</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
-<h2>Book a Club</h2>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit Booking</button>
-</form>
-<a href="{% url 'booking-list' %}">Back</a>
 {% endblock %}
