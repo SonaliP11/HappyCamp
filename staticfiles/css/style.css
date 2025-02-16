@@ -296,3 +296,11 @@ p.lead {
     box-shadow: 0 4px 8px #FF6F61;
 }
 
+.card-header{
+    background-color: #FF6F61;
+    color: white;
+}
+
+.border-custom {
+    border: 2px solid #FF6F61;
+}
