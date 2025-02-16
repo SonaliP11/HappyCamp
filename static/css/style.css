@@ -243,6 +243,7 @@ body {
     background-color: #007f63;
 }
 
+
 /* About Page */
 
 .hero-image {
@@ -289,5 +290,8 @@ h1, h2 {
 p.lead {
     font-size: 1.25rem;
     color: white;
+=======
+.custom-shadow {
+    box-shadow: 0 4px 8px #FF6F61;
 }
 
