@@ -157,7 +157,7 @@ body {
 .club-details {
     font-size: 14px;
     font-weight: 500;
-    color: #FF6F61;
+    color: black;
     margin-right: 5px;
 }
 .club-container {
@@ -184,7 +184,29 @@ body {
     object-fit: cover;
 }
 
-   
+/* Progress Bar */
+.progress {
+    height: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    background-color: #009879; /* Change to your desired color */
+    height: 100%;
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Text color inside the progress bar */
+    font-weight: bold;
+    font-size: 14px; /* Adjust the font size as needed */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+} 
 
 
 
@@ -279,6 +301,7 @@ body {
     height: auto;
     object-fit: cover;
     object-position: center;
+    max-height: 300px;
 
 }
 
@@ -304,3 +327,6 @@ p.lead {
 .border-custom {
     border: 2px solid #FF6F61;
 }
+
+
+
