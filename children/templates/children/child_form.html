@@ -2,13 +2,22 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-
 {% block content %}
-<h2>Add Child</h2>
-<form method="POST" action="{% url 'child-create' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save</button>
-</form>
-<a href="{% url 'child-list' %}">Cancel</a>
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow-sm rounded border-custom" style="width: 100%; max-width: 600px;">
+        <div class="card-header text-center rounded-top">
+            <h3 class="mb-0"><strong>Add Child</strong></h3>
+        </div>
+        <div class="card-body fs-6">
+            <form method="POST" action="{% url 'child-create' %}" class="needs-validation" novalidate>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="d-flex justify-content-center mt-4">
+                    <button type="submit" class="btn btn-primary me-2 rounded">Save</button>
+                    <a href="{% url 'child-list' %}" class="btn btn-secondary rounded">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

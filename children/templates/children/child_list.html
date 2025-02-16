@@ -19,7 +19,7 @@
             <td>{{ child.first_name }}</td>
             <td>{{ child.last_name }}</td>
             <td>{{ child.parent.username }}</td>
-            <td><button onclick="toggleDetails({{ child.id }})">View Details</button></td>
+            <td><button onclick="toggleDetails('{{ child.id }}')">View Details</button></td>
         </tr>
         <tr id="details-{{ child.id }}" style="display: none;">
             <td colspan="5">
