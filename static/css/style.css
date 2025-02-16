@@ -8,6 +8,7 @@ body {
     color: #333;
 }
 
+
 /* Navbar Styling */
 .navbar-background {
     background-color: #ffdf2f;
@@ -240,5 +241,53 @@ body {
 
 .btn:hover {
     background-color: #007f63;
+}
+
+/* About Page */
+
+.hero-image {
+    background-size: cover;
+    background-image: url('/static/images/hero.jpeg');
+    background-position: center;
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.translucent-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.team-card-img {
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+h1, h2 {
+    color: #FF6F61;
+    font-weight: bold;
+}
+
+p.lead {
+    font-size: 1.25rem;
+    color: white;
 }
 
