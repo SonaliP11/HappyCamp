@@ -1,21 +1,27 @@
-{% extends "account/base.html" %}
+{% extends "base.html" %}
 
 {% load i18n %}
+{% load account socialaccount %}
 
-{% block head_title %}{% trans "Signup" %}{% endblock head_title %}
+{% block head_title %}{% trans "Sign Up" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
-
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
-
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
-
-{% endblock content %}
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow-sm border-custom" style="width: 100%; max-width: 600px;">
+        <div class="card-header text-center">
+            <h3 class="mb-0 text-primary"><strong>{% trans "Sign Up" %}</strong></h3>
+        </div>
+        <div class="card-body">
+            <p class="text-center">{% trans 'Create an account to book a club or manage your bookings.' %}</p>
+            <form method="POST" action="{% url 'account_signup' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="d-flex justify-content-center mt-4">
+                    <button class="btn btn-primary me-2" type="submit">{% trans 'Sign Up' %}</button>
+                    <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -6,27 +6,23 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <h3>{% trans "Sign In" %}</h3>
-
-            <p>{% blocktrans %}Welcome back to the code|star blog. To leave a comment or like a post, please log in. If
-                you
-                have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
-                first.{% endblocktrans %}</p>
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow-sm border-custom" style="width: 100%; max-width: 600px;">
+        <div class="card-header text-center">
+            <h3 class="mb-0 text-primary"><strong>{% trans "Sign In" %}</strong></h3>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <form class="login" method="POST" action="{% url 'account_login' %}">
+        <div class="card-body">
+            <p class="text-center">Welcome back to HappyCamp. To book a club or manage your bookings, please log in. If you have not created an account yet, then <a class="link" href="{% url 'account_signup' %}">sign up</a> first.</p>
+            <form class="login needs-validation" method="POST" action="{% url 'account_login' %}" novalidate>
                 {% csrf_token %}
                 {{ form.as_p }}
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
+                <div class="d-flex justify-content-center mt-4">
+                    <button class="btn btn-primary me-2" type="submit">{% trans "Sign In" %}</button>
+                    
+                </div>
             </form>
         </div>
     </div>
