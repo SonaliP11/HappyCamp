@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-5 d-flex justify-content-center mb-5">
+    <div class="card shadow-sm rounded border-custom" style="width: 100%; max-width: 600px;">
+        <div class="card-header text-center rounded-top">
+            <h3 class="mb-0"><strong>Update Child</strong></h3>
+        </div>
+        <div class="card-body fs-6">
+            <form method="POST" action="{% url 'child-update' child.id %}" class="needs-validation" novalidate>
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="{{ form.first_name.id_for_label }}"><strong>{{ form.first_name.label }}</strong></label>
+                    {{ form.first_name }}
+                </div>
+                <div class="mb-3">
+                    <label for="{{ form.last_name.id_for_label }}"><strong>{{ form.last_name.label }}</strong></label>
+                    {{ form.last_name }}
+                </div>
+                <div class="mb-3">
+                    <label for="{{ form.date_of_birth.id_for_label }}"><strong>{{ form.date_of_birth.label }}</strong></label>
+                    {{ form.date_of_birth }}
+                </div>
+                <div class="mb-3">
+                    <label for="{{ form.allergies.id_for_label }}"><strong>{{ form.allergies.label }}</strong></label>
+                    {{ form.allergies }}
+                </div>
+                <div class="mb-3">
+                    <label for="{{ form.emergency_contact.id_for_label }}"><strong>{{ form.emergency_contact.label }}</strong></label>
+                    {{ form.emergency_contact }}
+                </div>
+                <div class="d-flex justify-content-center mt-4">
+                    <button type="submit" class="btn btn-primary me-2 rounded">Save</button>
+                    <a href="{% url 'child-list' %}" class="btn btn-secondary rounded">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
