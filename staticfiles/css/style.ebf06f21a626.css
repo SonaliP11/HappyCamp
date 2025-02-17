@@ -352,7 +352,7 @@ p.lead {
 
 .hero-image {
     background-size: cover;
-    background-image: url('/static/images/hero.jpeg');
+    background-image: url("/static/images/hero.02ced978a146.jpeg");
     background-position: center;
     position: relative;
     height: 80vh;
