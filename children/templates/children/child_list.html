@@ -22,7 +22,15 @@
                     <p><strong>Bookings:</strong></p>
                     <ul>
                         {% for booking in child.bookings.all %}
-                        <li>{{ booking.club.name }} on {{ booking.booking_date }} ({{ booking.status }})</li>
+                        <li>
+                            {{ booking.club.name }} on {{ booking.booking_date }} ({{ booking.status }})
+                            {% if booking.status == 'confirmed' %}
+                            <form method="POST" action="{% url 'booking-cancel' booking.id %}" style="display:inline;" onsubmit="return confirmCancel();">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger btn-sm">Cancel</button>
+                            </form>
+                            {% endif %}
+                        </li>
                         {% empty %}
                         <li>No bookings found.</li>
                         {% endfor %}
@@ -51,6 +59,10 @@ function toggleDetails(childId) {
     } else {
         detailsRow.style.display = 'none';
     }
+}
+
+function confirmCancel() {
+    return confirm('Are you sure you want to cancel this booking?');
 }
 </script>
 

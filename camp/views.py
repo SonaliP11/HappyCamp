@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 def club_detail(request, slug):
     club = get_object_or_404(Club, slug=slug)
     return render(request, 'camp/club_detail.html', {'club': club})
+
 class ClubList(generic.ListView):
     model = Club
     template_name = "camp/index.html"
