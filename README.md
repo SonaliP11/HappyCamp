@@ -16,7 +16,7 @@ The purpose of HappyCamp is to provide a comprehensive platform that enhances th
 
 To ensure that HappyCamp is accessible on all devices, we have utilized the AmIResponsive tool. This tool allows us to preview how our website looks on different screen sizes and devices, ensuring a seamless user experience regardless of the device being used.
 
-![Responsive](static/images/readme/responsive1.png)
+![Responsive](static/images/responsive1.png)
 
 ## Agile Methodology
 
@@ -244,4 +244,6 @@ Minimal manual adjustments were needed to apply AI-driven improvements, which en
 - **User Experience Improvements**: Applied AI-driven design recommendations to improve the overall user interface, making it more intuitive and user-friendly.
 - **Accessibility Enhancements**: Leveraged AI tools to identify and address accessibility issues, ensuring a more inclusive experience for users with disabilities.
 
+![Lighthouse Image for Mobile](static/images/performance_mobile.png)
+![Lighthouse Image for Mobile](static/images/performance_desktop.png)
 
