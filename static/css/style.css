@@ -59,16 +59,15 @@ p.lead {
     color: black; /* Black */
 }
 
-
-
 /* Navbar Toggle (Mobile) */
 .navbar-toggler {
-    border: none;
-    outline: none;
+    border: black;
+    outline: black;
 }
 
 .navbar-toggler-icon {
-    filter: invert(100%);
+    border-radius: 5px; /* Optional: Add some border radius */
+    padding: 5px; /* Optional: Add some padding */
 }
 
 /* Messages */
