@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Booking
@@ -29,6 +30,7 @@ def booking_create(request):
             booking = form.save(commit=False)
             booking.parent = request.user
             booking.save()
+            messages.success(request, 'Thanks for booking, it will be confirmed soon.')
             return redirect('booking-list')
     else:
         form = BookingForm(user=request.user, initial=initial_data)
