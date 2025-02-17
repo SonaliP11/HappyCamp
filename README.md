@@ -185,3 +185,4 @@ Create a Superuser: Create a superuser for the Django admin interface.
 Open the App: Open your deployed app in the browser.
   
   `heroku open`
+
