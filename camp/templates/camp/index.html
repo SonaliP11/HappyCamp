@@ -4,26 +4,36 @@
 <div class="container mt-4">
     <h1 class="text-center title-text">Explore Our After-School Clubs</h1>
     <p class="text-center text-muted">Find fun and exciting activities for your children!</p>
-    <div class="container">
-        <div class="left">
-            <div class="acronym">
-                H - <span>Hopscotch</span><br>
-                A - <span>Adventure</span><br>
-                P - <span>Playtime</span><br>
-                P - <span>Painting</span><br>
-                Y - <span>Yoga</span><br>
-                C - <span>Camping</span><br>
-                A - <span>Acting</span><br>
-                M - <span>Music</span><br>
-                P - <span>Puzzles</span>
-            </div>
-        </div>
-        <div class="right">
-            <div class="image-container">
-                <img src="your-image.jpg" alt="Happy Camp Image">
+    
+    <!-- Happy Camp Flipping Card Section -->
+    <div class="row align-items-center mt-5 mb-5 acronymn-container">
+        <div class="col-md-12 d-flex justify-content-center">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="{% static 'images/happy.webp' %}" alt="Happy Camp Image" class="img-fluid oval-shape">
+                    </div>
+                    <div class="flip-card-back acronym p-4">
+                        <h2 class="text-center">HAPPY CAMP</h2>
+                        <p>H - <span>Hopscotch</span></p>
+                        <p>A - <span>Adventure</span></p>
+                        <p>P - <span>Playtime</span></p>
+                        <p>P - <span>Painting</span></p>
+                        <p>Y - <span>Yoga</span></p>
+                        <p>C - <span>Camping</span></p>
+                        <p>A - <span>Acting</span></p>
+                        <p>M - <span>Music</span></p>
+                        <p>P - <span>Puzzles</span></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+
+
+    
+
     <!-- This Week's Events Section -->
     <h2 class="text-center mt-5">This Week's Events</h2>
     <div class="row justify-content-center">
