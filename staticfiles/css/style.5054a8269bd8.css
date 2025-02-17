@@ -83,10 +83,7 @@ p.lead {
     flex-direction: column;
     margin: 20px 0;
     width: 100%;
-    background-image: url('/static/images/happykids.png');
-    background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
-    border-radius: 10px;  
-}
+    background-image: url("/static/images/happykids.820df481111e.png");}
 
 .flip-card {
     background-color: transparent;
@@ -337,7 +334,7 @@ p.lead {
 
 .hero-image {
     background-size: cover;
-    background-image: url('/static/images/hero.jpeg');
+    background-image: url("/static/images/hero.02ced978a146.jpeg");
     background-position: center;
     position: relative;
     height: 80vh;

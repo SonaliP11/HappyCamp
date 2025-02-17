@@ -83,8 +83,7 @@ p.lead {
     flex-direction: column;
     margin: 20px 0;
     width: 100%;
-    background-color: aqua;
-}
+    background-image: url('/static/images/happykids.png');}
 
 .flip-card {
     background-color: transparent;
@@ -207,23 +206,6 @@ p.lead {
 
 
 
-/* Responsive Styles */
-@media (max-width: 992px) {
-    .navbar .nav-links {
-        text-align: center;
-        padding-top: 10px;
-    }
-    
-    .navbar .nav-item {
-        padding: 5px 0;
-    }
-
-    .navbar .join-btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-}
 
 
 /* Title Styling */
@@ -434,6 +416,39 @@ p.lead {
     font-size: 1.2rem;
 }
 
+
+
+/* Form Fields */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    border-radius: 20px; /* Curved style */
+    border: 1px solid #93827F;
+    padding: 10px;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #93827F; /* Primary color border on focus */
+    box-shadow: 0 0 0 0.2rem rgba(255, 111, 97, 0.25);
+    outline: 0;
+}
+
 /* Responsive Styles for Testimonial Carousel */
 @media (max-width: 768px) {
     .testimonial-card {
@@ -473,33 +488,20 @@ p.lead {
     }
 }
 
-/* Form Fields */
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="number"],
-select,
-textarea {
-    border-radius: 20px; /* Curved style */
-    border: 1px solid #93827F;
-    padding: 10px;
-    width: 50%;
-    box-sizing: border-box;
-    margin-bottom: 15px;
-    font-size: 1rem;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .navbar .nav-links {
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    .navbar .nav-item {
+        padding: 5px 0;
+    }
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-select:focus,
-textarea:focus {
-    border-color: #93827F; /* Primary color border on focus */
-    box-shadow: 0 0 0 0.2rem rgba(255, 111, 97, 0.25);
-    outline: 0;
+    .navbar .join-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
 }
