@@ -23,5 +23,7 @@ class Booking(models.Model):
         
     ]
     payment_status = models.CharField(max_length=10, choices=PAYMENT_CHOICES, default='pending')
+    payment = models.DecimalField(max_length=10, decimal_places=2, max_digits=10, default=0.00)
+
     def __str__(self):
         return f"Booking for {self.child.first_name} in {self.club.name} ({self.status})"

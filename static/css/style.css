@@ -451,6 +451,7 @@ input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus,
+input[type="payment_method"]:focus,
 select:focus,
 textarea:focus {
     border-color: #93827F; /* Primary color border on focus */

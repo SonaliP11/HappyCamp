@@ -30,4 +30,30 @@
     {% endfor %}
 </div>
 
+<h2 class="text-center mt-5">Your Bookings</h2>
+<div class="row justify-content-center">
+    {% for booking in bookings %}
+    <div class="col-12 col-md-10 col-lg-8 mb-4">
+        <div class="card booking-card custom-shadow px-3">
+            <div class="card-body">
+                <h4 class="card-title">{{ booking.child.first_name }} at {{ booking.club.name }}</h4>
+                <p class="card-text">
+                    <strong>Status:</strong> {{ booking.get_status_display }}<br>
+                    <strong>Booking Date:</strong> {{ booking.booking_date }}
+                </p>
+                {% if booking.status == 'confirmed' %}
+                <form method="POST" action="{% url 'booking-cancel' booking.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Cancel Booking</button>
+                </form>
+                {% elif booking.payment_status == 'pending' %}
+                <a href="{% url 'booking-payment' booking.id %}" class="btn btn-primary">Pay Now</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
 {% endblock %}

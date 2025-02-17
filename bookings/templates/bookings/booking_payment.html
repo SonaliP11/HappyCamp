@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Book a Club</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <label for="payment_method">Select Payment Method:</label>
+    <select name="payment_method" id="payment_method">
+        <option value="voucher">Voucher</option>
+        <option value="card">Card</option>
+    </select>
+    <button type="submit" class="btn btn-primary">Book Now</button>
+</form>
+<a href="{% url 'booking-list' %}">Go Back</a>
+{% endblock %}
