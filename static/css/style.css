@@ -84,7 +84,7 @@ p.lead {
     flex-direction: column;
     margin: 20px 0;
     width: 100%;
-    background-color: aqua;
+    background-image: url('/static/images/solar.jpg');
 }
 
 .flip-card {
