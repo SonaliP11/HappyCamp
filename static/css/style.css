@@ -85,7 +85,12 @@ p.lead {
     margin: 20px 0;
     width: 100%;
     background-image: url('/static/images/happykids.png');
-    background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    background-blend-mode: darken;
+    opacity: 1.5; /* Adjust the opacity to make the background image translucent */
+    background-color: rgba(0, 0, 0, 0.5); /* Darken the background image */
     border-radius: 10px;  
 }
 

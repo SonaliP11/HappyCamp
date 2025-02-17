@@ -186,6 +186,7 @@ Open the App: Open your deployed app in the browser.
   
   `heroku open`
 
+
 By following these steps, you can deploy the HappyCamp project on Heroku and make it accessible to users.
 
 ## Verification and Validation
