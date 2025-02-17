@@ -247,3 +247,236 @@ Minimal manual adjustments were needed to apply AI-driven improvements, which en
 ![Lighthouse Image for Mobile](static/images/performance_mobile.png)
 ![Lighthouse Image for Mobile](static/images/performance_desktop.png)
 
+
+## Manual Unit Testing
+## Test Cases
+
+### Test Case 1: User Registration
+
+**Description**: Verify that a new user can register successfully.
+
+**Steps**:
+1. Navigate to the registration page.
+2. Enter valid user details (username, email, password).
+3. Submit the registration form.
+
+**Expected Result**: The user is registered successfully and redirected to the login page.
+
+### Test Case 2: User Login
+
+**Description**: Verify that a registered user can log in successfully.
+
+**Steps**:
+1. Navigate to the login page.
+2. Enter valid login credentials (username and password).
+3. Submit the login form.
+
+**Expected Result**: The user is logged in successfully and redirected to the dashboard.
+
+### Test Case 3: Add New Child Profile
+
+**Description**: Verify that a parent can add a new child profile.
+
+**Steps**:
+1. Log in as a parent.
+2. Navigate to the "Add Child" page.
+3. Enter valid child details (first name, last name, date of birth).
+4. Submit the form.
+
+**Expected Result**: The child profile is added successfully and displayed in the parent's dashboard.
+
+### Test Case 4: Book a Club Session
+
+**Description**: Verify that a user can book a club session.
+
+**Steps**:
+1. Log in as a user.
+2. Navigate to the "Book Sessions" page.
+3. Select a club session.
+4. Click the "Book Now" button.
+5. Confirm the booking.
+
+**Expected Result**: The club session is booked successfully and displayed in the user's bookings.
+
+### Test Case 5: View Club Details
+
+**Description**: Verify that a user can view the details of a club.
+
+**Steps**:
+1. Navigate to the "Clubs" page.
+2. Select a club.
+3. View the club details (description, location, activities).
+
+**Expected Result**: The club details are displayed correctly.
+
+### Test Case 6: Responsive Design
+
+**Description**: Verify that the website is responsive and displays correctly on different devices.
+
+**Steps**:
+1. Open the website on a desktop browser.
+2. Resize the browser window to different screen sizes (mobile, tablet, desktop).
+3. Verify that the layout adjusts correctly.
+
+**Expected Result**: The website layout adjusts correctly for different screen sizes.
+
+### Test Case 7: Accessibility - Screen Reader
+
+**Description**: Verify that the website is accessible using a screen reader.
+
+**Steps**:
+1. Open the website with a screen reader enabled.
+2. Navigate through the website using the screen reader.
+3. Verify that all content is accessible and read correctly by the screen reader.
+
+**Expected Result**: The screen reader reads all content correctly, and all interactive elements are accessible.
+
+### Test Case 8: Keyboard Navigation
+
+**Description**: Verify that the website is fully navigable using a keyboard.
+
+**Steps**:
+1. Open the website.
+2. Navigate through the website using only the keyboard (Tab, Enter, Arrow keys).
+3. Verify that all interactive elements can be accessed and operated using the keyboard.
+
+**Expected Result**: All interactive elements are accessible and operable using the keyboard.
+
+### Test Case 9: Color Contrast
+
+**Description**: Verify that the website meets WCAG guidelines for color contrast.
+
+**Steps**:
+1. Open the website.
+2. Use a color contrast checker tool to check the contrast of text and background elements.
+3. Verify that the color contrast meets WCAG guidelines.
+
+**Expected Result**: The color contrast meets WCAG guidelines for all text and background elements.
+
+### Test Case 10: Text Resizing
+
+**Description**: Verify that text can be resized without breaking the layout or functionality.
+
+**Steps**:
+1. Open the website.
+2. Use the browser's text resizing feature to increase and decrease the text size.
+3. Verify that the text resizes correctly and the layout remains intact.
+
+**Expected Result**: The text resizes correctly, and the layout remains intact.
+
+## Overall Impact
+
+### Reflection
+
+AI tools streamlined repetitive tasks, enabling focus on high-level development.
+
+### Examples
+
+- **Efficiency Gains**: 
+  - **Faster Debugging**: AI tools helped identify and resolve issues quickly, reducing the time spent on debugging.
+  - **Comprehensive Testing**: Automated test generation and execution ensured thorough testing coverage, improving the reliability of the application.
+  - **Improved Code Quality**: AI-driven code suggestions and refactoring enhanced the overall quality and maintainability of the codebase.
+
+- **Challenges**: 
+  - **Contextual Adjustments**: AI-generated outputs sometimes required contextual adjustments to align with project goals and standards. These adjustments were made effectively, ensuring the final implementation met the desired requirements.
+  - **Inclusivity Enhancements**: AI tools were used to identify and address accessibility issues, making the application more inclusive for users with disabilities.
+
+By leveraging AI tools, the development process for HappyCamp was significantly enhanced, resulting in a more efficient, reliable, and inclusive application.
+
+# Testing Summary
+## Manual Testing
+
+### Devices and Browsers Tested
+
+- **Devices**: 
+  - Desktop (Windows, macOS)
+  - Tablet (iPad, Android)
+  - Mobile (iPhone, Android)
+
+- **Browsers**: 
+  - Google Chrome
+  - Mozilla Firefox
+  - Safari
+  - Microsoft Edge
+
+- **Assistive Technologies**: 
+  - Screen Readers (NVDA, VoiceOver)
+  - Keyboard-Only Navigation
+
+### Features Tested
+
+- User Registration and Login
+- Parent & Child Profile Management
+- Club Details and Booking
+- Responsive Design
+- Accessibility Features (Screen Reader Support, Keyboard Navigation, Color Contrast, Text Resizing)
+- Navigation and CRUD Operations
+
+### Results
+
+- All critical features worked as expected, including accessibility checks.
+- The application was fully navigable using a keyboard.
+- Screen readers accurately read all content and interactive elements.
+- Color contrast met WCAG guidelines.
+- Text resizing did not break the layout or functionality of the application.
+
+# Future Enhancements
+# Future Enhancements
+
+### Potential Improvements
+
+1. **Enhanced User Profiles**: 
+   - Allow users to upload profile pictures.
+   - Add more detailed information fields for children and parents.
+
+2. **Advanced Search and Filtering**: 
+   - Implement advanced search and filtering options for clubs and activities.
+   - Allow users to filter by location, age group, activity type, and availability.
+
+3. **Notifications and Reminders**: 
+   - Add email and SMS notifications for upcoming bookings and events.
+   - Implement reminders for parents about upcoming activities and deadlines.
+
+4. **Social Features**: 
+   - Enable users to share their bookings and experiences on social media.
+   - Add a feature for parents to leave reviews and ratings for clubs and activities.
+
+5. **Mobile App**: 
+   - Develop a mobile app for iOS and Android to provide a more seamless experience for users on the go.
+
+6. **Integration with Calendar Apps**: 
+   - Allow users to sync their bookings with popular calendar apps like Google Calendar and Apple Calendar.
+
+7. **Enhanced Accessibility Features**: 
+   - Continuously improve accessibility features based on user feedback and new guidelines.
+   - Implement voice command functionality for easier navigation.
+
+8. **AI-Based Recommendations**: 
+   - Use AI to recommend activities and clubs based on user preferences and past bookings.
+
+9. **Offline Access**: 
+   - Provide offline access to certain features, allowing users to view their bookings and activities without an internet connection.
+
+10. **Expanded Payment Options**: 
+    - Integrate additional payment gateways to provide more options for users.
+
+By implementing these future enhancements, we aim to continuously improve the HappyCamp platform and provide an even better experience for our users.
+
+# Acknowledgements
+
+We would like to express our gratitude to the following individuals and organizations for their support and contributions to the HappyCamp project:
+
+- **Code Institute**: For providing the educational resources, guidance, and support that made this project possible. The comprehensive curriculum and mentorship were invaluable in helping us develop our skills and complete this project successfully.
+  - **Roo**
+  - **Spencers**
+  - **Emma**
+
+- **Team Members**:
+  - **Prapti**: For your leadership, dedication, and hard work throughout the project. Your contributions were essential to the success of HappyCamp.
+  - **Zalak**: For your dedication, hard work, and collaboration throughout the project. Your contributions were essential to the success of HappyCamp.
+  - **Sonali**: For your creativity, problem-solving skills, and teamwork. Your efforts greatly enhanced the quality and functionality of the project.
+
+Thank you all for your support and contributions to the HappyCamp project. We couldn't have done it without you!
+
+
+
