@@ -57,31 +57,31 @@ To prioritize our tasks, we use the MoSCoW method, categorizing them into Must h
 ### Wireframes
 
 Wireframes were created to outline the structure and layout of the HappyCamp website. These wireframes served as a blueprint for the design and development process, ensuring that all necessary elements were included and positioned correctly. Some designs were changed while implementing it.
-You can view our wireframes for Desktop [here](static/images/readme/Wireframe1.png)
-[2](static/images/readme/Wireframe2.png)
+You can view our wireframes for Desktop ![here](static/images/readme/Wireframe1.png)
+![2](static/images/readme/Wireframe2.png)
 
-[3](static/images/readme/Wireframe3.png)
-[4](static/images/readme/Wireframe4.png)
-[5](static/images/readme/Wireframe5.png)
-[6](static/images/readme/Wireframe6.png)
+![3](static/images/readme/Wireframe3.png)
+![4](static/images/readme/Wireframe4.png)
+![5](static/images/readme/Wireframe5.png)
+![6](static/images/readme/Wireframe6.png)
 
-You can view our wireframes for Mobile [here](static/images/readme/Wireframe7.png)
-[8](static/images/readme/Wireframe8.png)
-[9](static/images/readme/Wireframe9.png)
-[10](static/images/readme/Wireframe10.png)
-[11](static/images/readme/Wireframe11.png)
+You can view our wireframes for Mobile ![here](static/images/readme/Wireframe7.png)
+![8](static/images/readme/Wireframe8.png)
+![9](static/images/readme/Wireframe9.png)
+![10](static/images/readme/Wireframe10.png)
+![11](static/images/readme/Wireframe11.png)
 
 ### Typography
 
 We have carefully selected typography that is both readable and visually appealing. The primary font used throughout the website is 'Roboto', which offers a clean and modern look. This font is complemented by 'Open Sans' for headings, providing a clear hierarchy and enhancing the overall user experience. Alkatra is used for heading.
 
-[typo](static/images/readme/typo.png)
+![typo](static/images/readme/typo.png)
 
 ### Color Palette
 
 Our color palette was chosen to create a vibrant and engaging atmosphere for users. The primary colors used are:
 
-[color](static/images/readme/color.png)
+![color](static/images/readme/color.png)
 
 These colors work together to create a cohesive and visually appealing design that enhances the user experience.
 
