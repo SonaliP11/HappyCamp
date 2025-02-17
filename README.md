@@ -85,3 +85,5 @@ Our color palette was chosen to create a vibrant and engaging atmosphere for use
 
 These colors work together to create a cohesive and visually appealing design that enhances the user experience.
 
+
+
