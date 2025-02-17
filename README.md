@@ -22,6 +22,10 @@ To ensure that HappyCamp is accessible on all devices, we have utilized the AmIR
 
 Our project follows Agile methodology, which promotes iterative development, collaboration, and flexibility. This approach allows us to adapt to changes quickly and deliver incremental improvements.
 
+## Entity Relationship Diagram
+
+![ERD](static/images/ERD.png)
+
 ## Project Board
 
 We use a project board to track our progress and manage tasks efficiently. The board is divided into columns such as "To Do," "In Progress," and "Done," providing a clear visual representation of our workflow.
