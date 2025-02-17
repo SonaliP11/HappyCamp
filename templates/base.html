@@ -40,7 +40,7 @@
 
 <body class="d-flex flex-column h-100 main-bg">
 
-    <div class="alert alert-info text-center mb-0 fs-5" role="alert">
+    <div class="alert alert-info text-center  fs-5" role="alert">
         {% if user.is_authenticated %}
         Welcome, <strong>{{ user.username }}</strong> !
         <a href="{% url 'account_logout' %}" class="alert-link fs-5" style="color: #93827F">Sign Out</a>
