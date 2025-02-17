@@ -20,28 +20,22 @@
     <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
 
     <!-- Google Fonts CSS -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Delius+Swash+Caps&display=swap" rel="stylesheet">
-    
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet"> -->
-    {% block link %}
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-      <!-- Custom CSS -->
-      <link rel="stylesheet" href="{% static 'css/style.css' %}">
-      {% endblock %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom CSS -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    {% block link %}{% endblock %}
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
@@ -57,76 +51,30 @@
     </div>
 
     <div class="navbar-background" style="background-color: #ffdf2f;">
-        <nav class="navbar navbar-expand-xl" style="color: black;">
+        <nav class="navbar navbar-expand-xl navbar-light" style="color: black;">
             <div class="container">
-                <div class="navbar-nav mr-auto nav-left">
-                    <a class="nav-item nav-link fs-4 px-5"  
-                        href="{% url 'home' %}"><strong>Home</strong></a>
-                    <a class="nav-item nav-link fs-4 px-5" href="{% url 'booking-list' %}"><strong>Book sessions</strong></a>
-                    <a class="nav-item nav-link fs-4 px-5" href="{% url 'about' %}"><strong>About</strong></a>
-                </div>
-                <a class="navbar-brand mx-auto logo-container" href="{% url 'home' %}">
+                <a class="navbar-brand logo-container" href="{% url 'home' %}">
                     <img src="{% static 'images/logo1.png' %}" alt="Logo" class="logo" width="100">
                 </a>
-                <div class="navbar-nav ml-auto nav-right">
-                    <a class="nav-item nav-link fs-4 px-5" href="{% url 'account_login' %}"><strong>Sign-in</strong></a>
-                    <a class="nav-item nav-link fs-4 px-5" href="{% url 'child-list' %}"><strong>My Dashboard</strong></a>
-                    <a class="nav-item nav-link fs-4 px-5" href="{% url 'account_signup' %}"><strong>Sign-up</strong></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav me-auto nav-left">
+                        <a class="nav-item nav-link fs-4 px-5" href="{% url 'home' %}"><strong>Home</strong></a>
+                        <a class="nav-item nav-link fs-4 px-5" href="{% url 'booking-list' %}"><strong>Book sessions</strong></a>
+                        <a class="nav-item nav-link fs-4 px-5" href="{% url 'about' %}"><strong>About</strong></a>
+                    </div>
+                    <div class="navbar-nav ms-auto nav-right">
+                        <a class="nav-item nav-link fs-4 px-5" href="{% url 'account_login' %}"><strong>Sign-in</strong></a>
+                        <a class="nav-item nav-link fs-4 px-5" href="{% url 'child-list' %}"><strong>My Dashboard</strong></a>
+                        <a class="nav-item nav-link fs-4 px-5" href="{% url 'account_signup' %}"><strong>Sign-up</strong></a>
+                    </div>
                 </div>
             </div>
         </nav>
-
     </div>
 
-    <!-- Navigation 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">Happy<span class="red-o">Camp</span></span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link {% if request.path == child_list_url %}active{% endif %}" aria-current="page"
-                          href="{% url 'child-list' %}">My Children</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == booking_list_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'booking-list' %}">Bookings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == about_url %}active{%endif%}" aria-current="page"
-                            href="#">About</a>
-                    </li>
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_signup' %}">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_login' %}">Login</a>
-                    </li>
-                    {% endif %}
-                </ul>
-                <span class="navbar-text text-muted">
-                    Adventures Await
-                </span>
-            </div>
-        </div>
-    </nav>
--->
     <!-- Displaying Django messages -->
     <div class="container">
         <div class="row">
@@ -169,9 +117,7 @@
         </p>
     </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   {% block extras %}
   {% endblock %}
 
