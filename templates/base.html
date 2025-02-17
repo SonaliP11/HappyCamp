@@ -20,11 +20,17 @@
     <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
 
     <!-- Google Fonts CSS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+    
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet"> -->
     {% block link %}
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -43,10 +49,10 @@
     <div class="alert alert-info text-center mb-0 fs-5" role="alert">
         {% if user.is_authenticated %}
         Welcome, <strong>{{ user.username }}</strong> !
-        <a href="{% url 'account_logout' %}" class="alert-link fs-5" style="color: #FF6F61">Sign Out</a>
+        <a href="{% url 'account_logout' %}" class="alert-link fs-5" style="color: #93827F">Sign Out</a>
         {% else %}
         Explore Activities for kids!
-        <a href="{% url 'account_login' %}" class="alert-link fs-5" style="color: #FF6F61">Sign In</a> to book fun activities.
+        <a href="{% url 'account_login' %}" class="alert-link fs-5" style="color: #93827F">Sign In</a> to book fun activities.
         {% endif %}
     </div>
 
@@ -54,7 +60,7 @@
         <nav class="navbar navbar-expand-xl" style="color: black;">
             <div class="container">
                 <div class="navbar-nav mr-auto nav-left">
-                    <a class="nav-item nav-link fs-4 px-5"
+                    <a class="nav-item nav-link fs-4 px-5"  
                         href="{% url 'home' %}"><strong>Home</strong></a>
                     <a class="nav-item nav-link fs-4 px-5" href="{% url 'booking-list' %}"><strong>Book sessions</strong></a>
                     <a class="nav-item nav-link fs-4 px-5" href="{% url 'about' %}"><strong>About</strong></a>

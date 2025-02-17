@@ -1,11 +1,29 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block content %}
 <div class="container mt-4">
     <h1 class="text-center title-text">Explore Our After-School Clubs</h1>
     <p class="text-center text-muted">Find fun and exciting activities for your children!</p>
-    
+    <div class="container">
+        <div class="left">
+            <div class="acronym">
+                H - <span>Hopscotch</span><br>
+                A - <span>Adventure</span><br>
+                P - <span>Playtime</span><br>
+                P - <span>Painting</span><br>
+                Y - <span>Yoga</span><br>
+                C - <span>Camping</span><br>
+                A - <span>Acting</span><br>
+                M - <span>Music</span><br>
+                P - <span>Puzzles</span>
+            </div>
+        </div>
+        <div class="right">
+            <div class="image-container">
+                <img src="your-image.jpg" alt="Happy Camp Image">
+            </div>
+        </div>
+    </div>
     <!-- This Week's Events Section -->
     <h2 class="text-center mt-5">This Week's Events</h2>
     <div class="row justify-content-center">
@@ -39,7 +57,6 @@
         <p class="text-center">No events this week.</p>
         {% endfor %}
     </div>
-
     <!-- Next Week's Events Section -->
     <h2 class="text-center mt-5">Upcoming Events of Next Week</h2>
     <div class="row justify-content-center">
@@ -71,20 +88,18 @@
         <p class="text-center">No upcoming events for next week.</p>
         {% endfor %}
     </div>
-
     <!-- Pagination Controls -->
     <div class="d-flex justify-content-center mt-3">
         {% if page_obj.has_previous %}
             <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-outline-primary me-2">❮ Previous</a>
         {% endif %}
-
         {% if page_obj.has_next %}
             <a href="?page={{ page_obj.next_page_number }}" class="btn btn-outline-primary">Next ❯</a>
         {% endif %}
     </div>
    <!-- Testimonial Carousel Section -->
    <h2 class="text-center mt-5">What Parents Are Saying</h2>
-   <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+   <div id="testimonialCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
        <div class="carousel-inner">
            <div class="carousel-item active">
                <div class="card testimonial-card shadow-sm">
