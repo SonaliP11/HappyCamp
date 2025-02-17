@@ -118,4 +118,70 @@ License
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
 This section highlights the accessibility considerations made for users with disabilities, such as screen reader support, color contrast, responsive design, and text resizing. You can add this directly to your `README.md` file to provide a comprehensive overview of the accessibility features of your HappyCamp project.
-This section highlights the accessibility considerations made for users with disabilities, such as screen reader support, color contrast, responsive design, and text resizing. You can add this directly to your `README.md` file to provide a comprehensive overview of the accessibility features of your HappyCamp project.
+
+## Key Features
+
+### Feature 1: User Authentication and Authorization
+
+- **Description**: Users can register, log in, and log out securely. User roles are managed to provide different levels of access.
+- **Inclusivity Notes**: The authentication process is designed to be straightforward and accessible, with clear instructions and feedback for users with disabilities.
+
+### Feature 2: Parent & Child Profile Management
+
+- **Description**: Parents can create and manage profiles for their children, storing details for easy booking of activities.
+- **Inclusivity Notes**: The profile management interface is designed with accessibility in mind, ensuring that all form fields are labeled and keyboard navigable.
+
+### Feature 3: Club Details and Booking
+
+- **Description**: Users can view detailed information about clubs, including descriptions, locations, and activities. They can also book sessions directly from the club details page.
+- **Inclusivity Notes**: The club details page includes high-contrast text and images with alt text, making it accessible to users with visual impairments.
+
+
+### Feature 4: Responsive Design
+
+- **Description**: The website is fully responsive, providing a seamless experience on mobile, tablet, and desktop devices.
+- **Inclusivity Notes**: The responsive design ensures that users with different devices and screen sizes can access the website comfortably.
+
+### Feature 5: Testimonials
+
+- **Description**: Users can read testimonials from other parents, providing social proof and building trust in the platform.
+- **Inclusivity Notes**: Testimonials are displayed in a readable format with high contrast, ensuring accessibility for all users.
+
+### Deployment Steps
+
+1. **Create a Heroku Account**: If you don't have a Heroku account, you can create one at [Heroku](https://www.heroku.com/).
+
+2. **Install the Heroku CLI**: Download and install the Heroku CLI from [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
+
+3. **Login to Heroku**: Use the Heroku CLI to log in to your Heroku account.
+   ```bash
+   heroku login
+
+   Create a New Heroku App: Create a new app on Heroku.
+
+   `heroku create happycamp`
+
+   Set Up Environment Variables: Set up the necessary environment variables for your Django project.
+
+    ` heroku config:set DEBUG=False`
+    `heroku config:set SECRET_KEY=<your_secret_key>`
+    `heroku config:set ALLOWED_HOSTS=happycamp.herokuapp.com`
+
+Add Heroku Postgres: Add the Heroku Postgres add-on to your app.
+   
+   `heroku addons:create heroku-postgresql:hobby-dev`
+
+Push Code to Heroku: Push your code to the Heroku remote repository.
+
+  `git push heroku main`
+
+Run Migrations: Run the database migrations on Heroku.
+
+  `heroku run python manage.py migrate`
+
+Create a Superuser: Create a superuser for the Django admin interface.
+
+    `heroku run python manage.py createsuperuser `
+Open the App: Open your deployed app in the browser.
+  
+  `heroku open`
