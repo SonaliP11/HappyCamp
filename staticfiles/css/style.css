@@ -37,6 +37,7 @@ p.lead {
     
 }
 
+
 .navbar-brand {
     font-size: 1rem;
     font-weight: bold;
@@ -83,7 +84,15 @@ p.lead {
     flex-direction: column;
     margin: 20px 0;
     width: 100%;
-    background-image: url('/static/images/happykids.png');}
+    background-image: url('/static/images/happykids.png');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    background-blend-mode: darken;
+    opacity: 1.5; /* Adjust the opacity to make the background image translucent */
+    background-color: rgba(0, 0, 0, 0.5); /* Darken the background image */
+    border-radius: 10px;  
+}
 
 .flip-card {
     background-color: transparent;
@@ -442,6 +451,7 @@ input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus,
+input[type="payment_method"]:focus,
 select:focus,
 textarea:focus {
     border-color: #93827F; /* Primary color border on focus */

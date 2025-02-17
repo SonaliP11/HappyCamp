@@ -12,7 +12,7 @@
         <div class="card-body">
             <form method="POST" class="needs-validation" novalidate>
                 {% csrf_token %}
-                <div class="mb-3 ">
+                <div class="mb-3">
                     <label for="{{ form.child.id_for_label }}"><strong>{{ form.child.label }}</strong></label>
                     <div>
                         {{ form.child }}
@@ -23,6 +23,14 @@
                     <div>
                         {{ form.club }}
                     </div>
+                </div>
+                <div class="mb-3">
+                    <label for="payment_method"><strong>Select Payment Method:</strong></label>
+                    <select name="payment_method" id="payment_method" class="form-select" required>
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="voucher">Voucher</option>
+                        <option value="card">Card</option>
+                    </select>
                 </div>
                 <div class="d-flex justify-content-center mt-4">
                     <button type="submit" class="btn btn-primary me-2">Submit Booking</button>

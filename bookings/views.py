@@ -48,3 +48,13 @@ def booking_cancel(request, booking_id):
     return render(request, 'bookings/booking_confirm_cancel.html', {'booking': booking})
 
 
+# Handle payment for a booking
+@login_required
+def booking_payment(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    if request.method == 'POST':
+        payment_method = request.POST.get('payment_method')
+        booking.payment_status = payment_method
+        booking.save()
+        return redirect('booking-list')
+    return render(request, 'bookings/booking_form.html', {'booking': booking})
